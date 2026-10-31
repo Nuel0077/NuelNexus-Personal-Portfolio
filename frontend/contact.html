@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with NuelNexus for website projects, collaborations, and tech discussions.">
+    <title>Contact | NuelNexus</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- AOS Animation CSS -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    >
+
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container navbar">
+            <a href="index.html" class="logo">Nuel<span>Nexus.</span></a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+            >
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact.html" class="contact-link active">Contact Me</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- CONTACT HERO -->
+    <main>
+        <section class="contact-hero">
+            <div class="container contact-hero-content" data-aos="fade-up">
+                <span class="eyebrow">LET'S CONNECT</span>
+
+                <h1>
+                    Have an idea?
+                    <span>Let's talk about it.</span>
+                </h1>
+
+                <p>
+                    Have a website idea, want to collaborate on a project,
+                    or simply want to connect? I'd love to hear from you.
+                    Let's turn good ideas into something meaningful.
+                </p>
+
+                <a href="#contact-details" class="btn btn-primary">
+                    Get In Touch
+                </a>
+            </div>
+        </section>
+
+        <!-- CONTACT DETAILS AND FORM -->
+
+        <section class="section contact" id="contact-details">
+            <div class="container">
+
+                <div class="section-heading" data-aos="fade-up">
+                    <span class="eyebrow">CONTACT ME</span>
+                    <h2 class="section-title">Let's Start a Conversation</h2>
+                    <p class="section-description">
+                        Whether it's a project, a collaboration, or a question,
+                        feel free to reach out.
+                    </p>
+                </div>
+
+                <div class="contact-content">
+
+                    <!-- CONTACT INFORMATION -->
+                    <div class="contact-info" data-aos="fade-right">
+                        <h3>I'd love to hear from you.</h3>
+
+                        <p>
+                            I'm learning, building projects, and growing my
+                            skills in web development, Python, and eventually
+                            bioinformatics. I'm open to meaningful
+                            conversations and suitable collaborations.
+                        </p>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">⌘</div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>Explore my code and learning projects.</p>
+                                <a href="https://github.com/Nuel0077"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                    Visit my GitHub →
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-method">
+                            <div class="contact-method-icon">✉</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>Have a question? You can email me directly.</p>
+                                <a href="mailto:ekeh2274@gmail.com">
+                                    ekeh2274@gmail.com →
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="contact-note">
+                            <strong>Currently open to:</strong>
+                            <p>
+                                Learning opportunities, beginner-friendly
+                                collaborations, and suitable website projects.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT FORM -->
+                    <div class="contact-form-wrapper" data-aos="fade-left">
+                        <h3>Send a Message</h3>
+
+                        <p class="form-intro">
+                            Fill in the form below to prepare your message in Gmail.
+                        </p>
+
+                        <form class="contact-form" id="contact-form">
+
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Your Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="What would you like to discuss?"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="5"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">
+                                Send Message →
+                            </button>
+
+                            <p class="form-notice">
+                                <strong>Temporary email setup:</strong>
+                                This form opens Gmail with your message prepared.
+                                Review it and click Send in Gmail. Messages are not
+                                stored on this website because the backend is not
+                                connected yet.
+                            </p>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <script>
+            const contactForm = document.getElementById("contact-form");
+
+            contactForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const subject = document.getElementById("subject").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                if (!name || !email || !subject || !message) {
+                    alert("Please fill in all the fields.");
+                    return;
+                }
+
+                const emailBody =
+                    "Name: " + name + "\n" +
+                    "Reply email: " + email + "\n\n" +
+                    "Message:\n" + message;
+
+                const gmailURL =
+                    "https://mail.google.com/mail/?view=cm&fs=1" +
+                    "&to=" + encodeURIComponent("ekeh2274@gmail.com") +
+                    "&su=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(emailBody);
+
+                window.open(gmailURL, "_blank");
+            });
+        </script>
+
+
+        <!-- CLOSING CTA -->
+        <section class="contact-cta">
+            <div class="container" data-aos="fade-up">
+                <span class="eyebrow">ONE STEP AT A TIME</span>
+                <h2>Good things start with a conversation.</h2>
+                <p>
+                    Take a look at my projects and follow my journey as I keep
+                    learning, building, and improving.
+                </p>
+
+                <a href="work.html" class="btn btn-primary">
+                    Explore My Projects
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content" data-aos="fade-up">
+            <p>
+                © <span id="year"></span> NuelNexus.
+                All rights reserved.
+            </p>
+
+            <a href="#">Back to Top ↑</a>
+        </div>
+    </footer>
+
+    <!-- AOS Animation JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            offset: 100
+        });
+    </script>
+
+</body>
+</html>

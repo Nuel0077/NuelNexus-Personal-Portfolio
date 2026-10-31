@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Articles about programming, web development, Biochemistry, and my learning journey.">
+    <title>Article | NuelNexus</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="logo">
+                Nuel<span>Nexus</span>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links"
+                type="button"
+            >☰</button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Work</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html" class="contact-link">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+        <section class="section article-section">
+            <div class="container article-container">
+
+                <a href="blog.html" class="article-back">
+                    ← Back to Blog
+                </a>
+
+                <article id="article-content" class="article-content">
+                    <p>Loading article...</p>
+                </article>
+
+                <div class="article-bottom">
+                    <a href="blog.html" class="btn btn-primary">
+                        Explore More Articles →
+                    </a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>
+                © <span id="year"></span> NuelNexus.
+                All rights reserved.
+            </p>
+
+            <a href="#">Back to Top ↑</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        const articles = {
+            biochemistry: {
+                category: "My Journey",
+                title: "From Biochemistry to Bioinformatics: My Learning Journey",
+                intro: "Exploring how my interest in biological science connects with programming and technology.",
+                paragraphs: [
+                    {
+                        heading: "Where it begins",
+                        text: "I'm a Biochemistry undergraduate at FUTO. Alongside my academic studies, I've been learning programming and building projects with the aim of developing my technical skills. Over time, I've become interested in how these two areas can work together."
+                    },
+                    {
+                        heading: "Why bioinformatics interests me",
+                        text: "Biology involves a lot of information, from DNA sequences and proteins to other kinds of biological data. Bioinformatics brings biology and computing together to help researchers work with that information. That connection between science and technology is what makes the field interesting to me."
+                    },
+                    {
+                        heading: "The programming side",
+                        text: "I've studied HTML, CSS, JavaScript, and Python, and I'm currently learning Django. Building small projects has helped me practise programming beyond just reading about it. I'm also developing my portfolio and working on ideas for larger applications."
+                    },
+                    {
+                        heading: "What I'm working towards",
+                        text: "My long-term goal is to become a bioinformatics scientist. I know that reaching that point will require a strong foundation in Biochemistry, programming, mathematics, and computational biology. I'm still learning, so I see each project and each new concept as part of that process."
+                    },
+                    {
+                        heading: "One step at a time",
+                        text: "I'm not claiming to be a bioinformatics expert today. I'm building the foundation gradually, improving my programming skills while continuing my university studies. This blog is one way to document that progress and share what I learn along the way."
+                    }
+                ]
+            },
+
+            javascript: {
+                category: "JavaScript",
+                title: "What Building JavaScript Projects Taught Me",
+                intro: "Learning JavaScript became more useful when I started turning concepts into small projects.",
+                paragraphs: [
+                    {
+                        heading: "Moving beyond the basics",
+                        text: "Learning the syntax of a programming language is one thing. Using it to make something work is another. Building projects gave me a practical way to apply what I was learning instead of relying only on examples from tutorials."
+                    },
+                    {
+                        heading: "Projects I've practised with",
+                        text: "My JavaScript practice includes a GitHub Finder, a Weather App, an AI Chatbox interface without an AI API, and a Network Status Checker. Each project gave me a different opportunity to practise building interfaces and making pages respond to user actions."
+                    },
+                    {
+                        heading: "Understanding the DOM",
+                        text: "Working with the Document Object Model, or DOM, helped me understand how JavaScript can interact with HTML elements. I have practised features such as menus, modals, toasts, counters, a to-do list, a student report, a calculator, and a colour picker."
+                    },
+                    {
+                        heading: "Learning to think through problems",
+                        text: "Not everything works correctly the first time. A feature might behave unexpectedly, a button might not do what I intended, or I might need to rethink the logic. Debugging and testing help me understand the problem instead of simply moving on."
+                    },
+                    {
+                        heading: "What comes next",
+                        text: "I want to keep improving my JavaScript logic and problem-solving skills, including through coding challenges. My aim is to understand why my code works, so I can build projects more confidently and handle problems I have not seen before."
+                    }
+                ]
+            },
+
+            python: {
+                category: "Python",
+                title: "Learning Python by Building Small Projects",
+                intro: "Small applications have helped me practise Python concepts in ways that are easier to test and understand.",
+                paragraphs: [
+                    {
+                        heading: "Why I build small projects",
+                        text: "When learning programming, it can be tempting to focus only on finishing lessons. I find that building something small gives me a clearer way to practise the concepts and see how they fit together."
+                    },
+                    {
+                        heading: "Some projects I've built",
+                        text: "My Python practice includes an Expense Tracker, a QR Code Generator, a signup and login practice project, a dice-rolling program, a number-guessing game, and a quiz game. These are learning projects that have helped me gain practical experience with Python."
+                    },
+                    {
+                        heading: "Practising the fundamentals",
+                        text: "Projects like these give me opportunities to work with variables, user input, conditionals, loops, and functions. They also help me practise organising instructions so a program can respond to different inputs and situations."
+                    },
+                    {
+                        heading: "Mistakes are part of the process",
+                        text: "Sometimes the program doesn't behave the way I expect. Instead of treating every error as a dead end, I try to trace what happened, check the relevant code, and understand what needs to change. This is an important part of learning to program."
+                    },
+                    {
+                        heading: "Building towards bigger applications",
+                        text: "I'm continuing to develop my Python skills while learning Django. My next goal is to use what I learn to build applications with more complete functionality, including projects that can store and manage data. I'm taking it step by step rather than rushing past the fundamentals."
+                    }
+                ]
+            },
+
+            portfolio: {
+                category: "Web Development",
+                title: "Building My Developer Portfolio: From Static Pages to a More Interactive Website",
+                intro: "I'm rebuilding my portfolio to present my work more professionally and give myself room to grow as a developer.",
+                paragraphs: [
+                    {
+                        heading: "This isn't my first portfolio",
+                        text: "I've built a portfolio website before. That earlier version was more static, and I wanted to create something more polished and interactive. Rather than treating a portfolio as just a page with my name and a list of skills, I want this version to present my work and learning journey more clearly."
+                    },
+                    {
+                        heading: "Organising the website",
+                        text: "For this version, I'm using separate pages for Home, About, Work, Services, Blog, and Contact. Each page has a purpose: introducing me, explaining my background, showcasing my projects, describing the services I can offer, documenting my learning, and giving visitors a way to reach me."
+                    },
+                    {
+                        heading: "Working with HTML, CSS, and JavaScript",
+                        text: "HTML provides the page structure, CSS controls the presentation, and JavaScript adds interactivity. I'm working on keeping the pages consistent while improving details such as navigation, project cards, responsive layouts, and calls to action."
+                    },
+                    {
+                        heading: "Keeping it honest",
+                        text: "I want the portfolio to reflect what I've actually built and what I'm still learning. My JavaScript and Python practice projects can be shown as learning work, while larger projects such as BioData Hub need to be described according to their current progress. I don't want to present an unfinished feature as a completed one."
+                    },
+                    {
+                        heading: "Publishing and improving it",
+                        text: "My plan is to host the frontend version before adding Django functionality. After that, I can continue improving the website and update it as I complete more projects. A portfolio doesn't have to be the final version of my work; it can grow alongside my skills."
+                    }
+                ]
+            },
+
+            django: {
+                category: "Django",
+                title: "My Journey from Frontend to Full-Stack Development",
+                intro: "I'm learning how to move beyond building interfaces and start understanding the backend that powers a web application.",
+                paragraphs: [
+                    {
+                        heading: "The frontend foundation",
+                        text: "I've studied HTML, CSS, and JavaScript and used them to build web pages and interactive practice projects. This has helped me understand how a user interface is structured and how a browser responds to user actions."
+                    },
+                    {
+                        heading: "Why I'm learning Python and Django",
+                        text: "I've also studied Python and built small Python projects. I'm currently learning Django, a Python web framework. I'm interested in understanding how a website can work with stored data, handle user accounts, and connect its interface to backend logic."
+                    },
+                    {
+                        heading: "What I'm learning to build",
+                        text: "My learning includes the basics of setting up a Django project and app, working with models, using migrations, registering models in the admin area, and organising templates and static files. These pieces help form the structure of a Django application."
+                    },
+                    {
+                        heading: "Applying it to my project ideas",
+                        text: "I want to use Django as I develop projects such as BioData Hub, SkillBridge, and DevFlow. For example, BioData Hub is intended to grow into a platform for working with scientific data. Its frontend is still in development, and the backend functionality is part of the work I plan to tackle as my Django knowledge improves."
+                    },
+                    {
+                        heading: "Still learning, still building",
+                        text: "I'm not presenting myself as an experienced full-stack developer yet. I'm learning the pieces and working towards connecting them. My aim is to understand the process from setting up a project through building its features, testing it, and eventually deploying it."
+                    }
+                ]
+            },
+
+            projects: {
+                category: "Building in Public",
+                title: "Turning Ideas into Real Projects",
+                intro: "I want to move beyond practising isolated coding exercises and gradually develop projects with a clear purpose.",
+                paragraphs: [
+                    {
+                        heading: "Why these projects?",
+                        text: "I have ideas for three larger projects: BioData Hub, SkillBridge, and DevFlow. Each has a different purpose, and working on them should give me opportunities to practise programming, organise features, and learn how a more complete application is put together."
+                    },
+                    {
+                        heading: "BioData Hub",
+                        text: "BioData Hub is a project idea that connects my interest in Biochemistry with programming and scientific data. I'm still developing its frontend. The broader plan includes features such as user accounts, dataset management, CSV handling, searching and filtering data, and displaying useful statistics and charts. Those backend features are planned work, not features I'm claiming are already complete."
+                    },
+                    {
+                        heading: "SkillBridge",
+                        text: "SkillBridge is planned as a learning and project collaboration platform. The idea is to help learners organise their learning, track progress, maintain profiles, and showcase projects. I still need to build and test its functionality as the project develops."
+                    },
+                    {
+                        heading: "DevFlow",
+                        text: "DevFlow is planned as a developer productivity and project management tool. The concept includes organising tasks by status, keeping track of projects and learning goals, and using a dashboard to make progress easier to follow. The next steps are to develop the features and make sure they work together properly."
+                    },
+                    {
+                        heading: "Building them one step at a time",
+                        text: "I don't expect to finish all three projects at once. I'll work through the frontend and backend in stages, test what I build, fix problems, and improve the applications as my skills grow. I also want to document the work and publish the projects when they are ready to share."
+                    },
+                    {
+                        heading: "The goal",
+                        text: "These projects are opportunities to learn by doing. I want them to become useful demonstrations of what I can build, while being honest about the difference between an idea, a work in progress, and a finished application. I'll keep updating them as I make real progress."
+                    }
+                ]
+            }
+        };
+
+        const articleContainer = document.getElementById("article-content");
+        const params = new URLSearchParams(window.location.search);
+        const postKey = params.get("post");
+        const article = articles[postKey];
+
+        if (article) {
+            document.title = article.title + " | NuelNexus";
+
+            const paragraphsHTML = article.paragraphs.map(item => `
+                <section class="article-block">
+                    <h2>${item.heading}</h2>
+                    <p>${item.text}</p>
+                </section>
+            `).join("");
+
+            articleContainer.innerHTML = `
+                <p class="eyebrow">${article.category}</p>
+                <h1 class="section-title">${article.title}</h1>
+                <p class="article-intro">${article.intro}</p>
+                <div class="article-divider"></div>
+                ${paragraphsHTML}
+                <div class="article-signoff">
+                    <p>
+                        Thanks for reading. This is part of my ongoing
+                        learning journey, and I'll keep improving as I build.
+                    </p>
+                    <a href="blog.html" class="article-back">
+                        ← Back to all articles
+                    </a>
+                </div>
+            `;
+        } else {
+            document.title = "Article Not Found | NuelNexus";
+
+            articleContainer.innerHTML = `
+                <p class="eyebrow">BLOG</p>
+                <h1 class="section-title">Article Not Found</h1>
+                <p class="article-intro">
+                    I couldn't find that article. Please return to the
+                    Blog page and choose one of the available articles.
+                </p>
+                <a href="blog.html" class="btn btn-primary">
+                    Return to Blog →
+                </a>
+            `;
+        }
+    </script>
+
+</body>
+</html>
