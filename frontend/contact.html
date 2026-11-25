@@ -14,6 +14,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     >
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -202,27 +204,41 @@
             </div>
         </section>
 
+
         <script>
-            const contactForm = document.getElementById("contact-form");
+        const contactForm = document.getElementById("contact-form");
 
-            contactForm.addEventListener("submit", function (event) {
-                event.preventDefault();
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-                const name = document.getElementById("name").value.trim();
-                const email = document.getElementById("email").value.trim();
-                const subject = document.getElementById("subject").value.trim();
-                const message = document.getElementById("message").value.trim();
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const subject = document.getElementById("subject").value.trim();
+            const message = document.getElementById("message").value.trim();
 
-                if (!name || !email || !subject || !message) {
-                    alert("Please fill in all the fields.");
-                    return;
-                }
+            if (!name || !email || !subject || !message) {
+                alert("Please fill in all the fields.");
+                return;
+            }
 
-                const emailBody =
-                    "Name: " + name + "\n" +
-                    "Reply email: " + email + "\n\n" +
-                    "Message:\n" + message;
+            const emailBody =
+                "Name: " + name + "\n" +
+                "Reply email: " + email + "\n\n" +
+                "Message:\n" + message;
 
+            // Mobile: use the phone's configured email application
+            if (window.matchMedia("(max-width: 760px)").matches) {
+
+                const mailtoURL =
+                    "mailto:ekeh2274@gmail.com" +
+                    "?subject=" + encodeURIComponent(subject) +
+                    "&body=" + encodeURIComponent(emailBody);
+
+                window.location.href = mailtoURL;
+
+            } else {
+
+                // Desktop: keep the existing Gmail compose behaviour
                 const gmailURL =
                     "https://mail.google.com/mail/?view=cm&fs=1" +
                     "&to=" + encodeURIComponent("ekeh2274@gmail.com") +
@@ -230,8 +246,9 @@
                     "&body=" + encodeURIComponent(emailBody);
 
                 window.open(gmailURL, "_blank");
-            });
-        </script>
+            }
+        });
+    </script>
 
 
         <!-- CLOSING CTA -->
@@ -275,5 +292,12 @@
         });
     </script>
 
+    <a href="https://wa.me/2347044583474?text=Hello%20NuelNexus!%20I%20visited%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project%20with%20you."
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat with me on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>

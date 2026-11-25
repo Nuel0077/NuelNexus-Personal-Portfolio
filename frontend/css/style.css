@@ -920,6 +920,7 @@ img {
 }
 
 /* CONTACT PAGE RESPONSIVENESS */
+
 @media (max-width: 760px) {
     .contact-hero {
         padding: 75px 0 65px;
@@ -930,8 +931,10 @@ img {
         gap: 35px;
     }
 
+    /* Show the contact form before contact information on mobile */
     .contact-form-wrapper {
         padding: 24px;
+        order: -1;
     }
 
     .contact-cta {
@@ -939,15 +942,6 @@ img {
     }
 }
 
-@media (max-width: 450px) {
-    .contact-form-wrapper {
-        padding: 20px;
-    }
-
-    .contact-method {
-        gap: 12px;
-    }
-}
 
 /* =========================
    WORK SECTION CTA
@@ -958,7 +952,6 @@ img {
     justify-content: center;
     margin-top: 45px;
 }
-
 
 
 /* =========================
@@ -1157,4 +1150,28 @@ span i {
     background: #ff7a18;
     color: #ffffff;
     transform: translateY(-3px);
+}
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed !important;
+    right: 20px !important;
+    bottom: 30px !important;
+    left: auto !important;
+    top: auto !important;
+
+    width: 55px;
+    height: 55px;
+    background: #25D366;
+    color: #ffffff;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 32px;
+    text-decoration: none;
+    z-index: 99999;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
